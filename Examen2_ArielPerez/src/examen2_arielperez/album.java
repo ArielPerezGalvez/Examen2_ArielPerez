@@ -5,16 +5,18 @@
  */
 package examen2_arielperez;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author ariel
  */
-public class album {
-    private String nombre;
+public class album implements Serializable {
+      private String nombre;
     private String artista;
-    private ArrayList <canciones> cancion= new ArrayList();
+    private ArrayList<canciones> cancion = new ArrayList();
+    private static final long SerialVersonUID = 777L;
 
     public album() {
     }
@@ -54,9 +56,4 @@ public class album {
     }
     
     
-    
-    
-    
-    
-    
-}//fin de la clase
+}

@@ -5,23 +5,26 @@
  */
 package examen2_arielperez;
 
+import java.io.Serializable;
+
 /**
  *
  * @author ariel
  */
-public class canciones {
-    private String nombre;
+public class canciones implements Serializable{
+      private String nombre;
     private String artista;
-    private double segundos;
+    private int s;
     private String genero;
+    private static final long SerialVersonUID = 777L;
 
     public canciones() {
     }
 
-    public canciones(String nombre, String artista, double segundos, String genero) {
+    public canciones(String nombre, String artista, int s, String genero) {
         this.nombre = nombre;
         this.artista = artista;
-        this.segundos = segundos;
+        this.s = s;
         this.genero = genero;
     }
 
@@ -41,12 +44,12 @@ public class canciones {
         this.artista = artista;
     }
 
-    public double getSegundos() {
-        return segundos;
+    public int getS() {
+        return s;
     }
 
-    public void setSegundos(double segundos) {
-        this.segundos = segundos;
+    public void setS(int s) {
+        this.s = s;
     }
 
     public String getGenero() {
@@ -59,12 +62,9 @@ public class canciones {
 
     @Override
     public String toString() {
-        return "canciones{" + "nombre=" + nombre + ", artista=" + artista + ", segundos=" + segundos + ", genero=" + genero + '}';
+        return "canciones{" + "nombre=" + nombre + ", artista=" + artista + ", s=" + s + ", genero=" + genero + '}';
     }
     
     
     
-    
-    
-    
-}//fin de la clase
+}
